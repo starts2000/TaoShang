@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB3B8773-39E1-4F4F-9471-675757BF5AF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Starts2000.TaobaoPlatform.Server.Tests</RootNamespace>
+    <AssemblyName>Starts2000.TaobaoPlatform.Server.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MD5EncryptTest.cs" />
+    <Compile Include="UserSubAccountTest.cs" />
+    <Compile Include="UserTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.Bll\Starts2000.TaobaoPlatform.Bll.csproj">
+      <Project>{c61c7e7a-bf75-4b81-bae0-5470599b0465}</Project>
+      <Name>Starts2000.TaobaoPlatform.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.Core\Starts2000.TaobaoPlatform.Core.csproj">
+      <Project>{daad0ca2-1b73-46b7-814b-29c76eaa7ae2}</Project>
+      <Name>Starts2000.TaobaoPlatform.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.IBll\Starts2000.TaobaoPlatform.IBll.csproj">
+      <Project>{022c279f-6d7a-45dc-8e32-b4d2fefb4825}</Project>
+      <Name>Starts2000.TaobaoPlatform.IBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.IDal\Starts2000.TaobaoPlatform.IDal.csproj">
+      <Project>{b05026b8-86a7-41c4-b0eb-2fae08b48c10}</Project>
+      <Name>Starts2000.TaobaoPlatform.IDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.Models\Starts2000.TaobaoPlatform.Models.csproj">
+      <Project>{86283cad-daf3-4d2b-8018-1a5b70d8f500}</Project>
+      <Name>Starts2000.TaobaoPlatform.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.UserDal\Starts2000.TaobaoPlatform.Dal.csproj">
+      <Project>{99eca347-f9a8-45b7-8271-7211868d4c0a}</Project>
+      <Name>Starts2000.TaobaoPlatform.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaobaoPlatform.Utils\Starts2000.TaobaoPlatform.Utils.csproj">
+      <Project>{7ccbfb22-0e26-45eb-8b29-8c10787074af}</Project>
+      <Name>Starts2000.TaobaoPlatform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B69F6B4-1B58-40F0-ACD7-85143774AE9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Starts2000.TaoBao.Views</RootNamespace>
+    <AssemblyName>Starts2000.TaoBao.Views</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=12.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net40\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Logging.3.2.0.0\lib\net40\Ninject.Extensions.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging.Log4Net, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Logging.Log4net.3.2.3.0\lib\net40\Ninject.Extensions.Logging.Log4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAbout.Designer.cs">
+      <DependentUpon>ViewAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUpdateSubAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUpdateSubAccount.Designer.cs">
+      <DependentUpon>ViewUpdateSubAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewChangePassword.Designer.cs">
+      <DependentUpon>ViewChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IOfflineCheckManager.cs" />
+    <Compile Include="IGlobalApplicationData.cs" />
+    <Compile Include="INotifyIconMagager.cs" />
+    <Compile Include="IViewFactory.cs" />
+    <Compile Include="ClientMainContext.cs" />
+    <Compile Include="NotifyIconManager.cs" />
+    <Compile Include="OperationMainContext.cs" />
+    <Compile Include="OrderRecordListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderRecordListControl.Designer.cs">
+      <DependentUpon>OrderRecordListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pagination.Designer.cs">
+      <DependentUpon>Pagination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SkinButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\AnyDesk.cs" />
+    <Compile Include="Utils\ConstData.cs" />
+    <Compile Include="Utils\KeyBoardHook.cs" />
+    <Compile Include="Utils\TripleDES.cs" />
+    <Compile Include="Utils\MD5Encrypt.cs" />
+    <Compile Include="ViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBaseEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBrowserSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBrowserSet.Designer.cs">
+      <DependentUpon>ViewBrowserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClientMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClientMain.Designer.cs">
+      <DependentUpon>ViewClientMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewConfirmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewConfirmReceipt.Designer.cs">
+      <DependentUpon>ViewConfirmReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewECommercePlatformSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewECommercePlatformSelect.Designer.cs">
+      <DependentUpon>ViewECommercePlatformSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLogin.Designer.cs">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMainCloseConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMainCloseConfirm.Designer.cs">
+      <DependentUpon>ViewMainCloseConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOptMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOptMain.Designer.cs">
+      <DependentUpon>ViewOptMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOrderRecordInfoOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOrderRecordInfoOpt.Designer.cs">
+      <DependentUpon>ViewOrderRecordInfoOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReadyConnectClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReadyConnectClient.Designer.cs">
+      <DependentUpon>ViewReadyConnectClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRegister.Designer.cs">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewResource\ViewResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShopManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewShopManage.Designer.cs">
+      <DependentUpon>ViewShopManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAddShop.Designer.cs">
+      <DependentUpon>ViewAddShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSubAccountManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSubAccountManage.Designer.cs">
+      <DependentUpon>ViewSubAccountManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddSubAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAddSubAccount.Designer.cs">
+      <DependentUpon>ViewAddSubAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUserInfo.Designer.cs">
+      <DependentUpon>ViewUserInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OrderRecordListControl.resx">
+      <DependentUpon>OrderRecordListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagination.resx">
+      <DependentUpon>Pagination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAbout.resx">
+      <DependentUpon>ViewAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUpdateSubAccount.resx">
+      <DependentUpon>ViewUpdateSubAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBrowserSet.resx">
+      <DependentUpon>ViewBrowserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClientMain.resx">
+      <DependentUpon>ViewClientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewConfirmReceipt.resx">
+      <DependentUpon>ViewConfirmReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewECommercePlatformSelect.resx">
+      <DependentUpon>ViewECommercePlatformSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLogin.resx">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMainCloseConfirm.resx">
+      <DependentUpon>ViewMainCloseConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOptMain.resx">
+      <DependentUpon>ViewOptMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrderRecordInfoOpt.resx">
+      <DependentUpon>ViewOrderRecordInfoOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReadyConnectClient.resx">
+      <DependentUpon>ViewReadyConnectClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRegister.resx">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewResource\ViewResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewChangePassword.resx">
+      <DependentUpon>ViewChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewShopManage.resx">
+      <DependentUpon>ViewShopManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAddShop.resx">
+      <DependentUpon>ViewAddShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSubAccountManage.resx">
+      <DependentUpon>ViewSubAccountManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAddSubAccount.resx">
+      <DependentUpon>ViewAddSubAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUserInfo.resx">
+      <DependentUpon>ViewUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Starts2000.TaobaoPlatform.Models.Shop.datasource" />
+    <None Include="Resources\all_inside_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_hover_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_normal_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_pressed_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NormlBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PasswordIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Starts2000.TaobaoPlatform.Server\Starts2000.TaobaoPlatform.Models\Starts2000.TaobaoPlatform.Models.csproj">
+      <Project>{86283cad-daf3-4d2b-8018-1a5b70d8f500}</Project>
+      <Name>Starts2000.TaobaoPlatform.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starts2000.TaoBaoTool.IBll\Starts2000.TaoBaoTool.IBll.csproj">
+      <Project>{5b704c0e-af24-4bd2-a55d-5fb897a304bf}</Project>
+      <Name>Starts2000.TaoBaoTool.IBll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_soft.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7342C4BF-4CDF-4256-A0E4-84BB0C0FE7EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Starts2000.Net</RootNamespace>
+    <AssemblyName>Starts2000.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffer\BufferBase.cs" />
+    <Compile Include="Buffer\BufferManagerFactory.cs" />
+    <Compile Include="Buffer\BufferOverflowException.cs" />
+    <Compile Include="Buffer\BufferUnderflowException.cs" />
+    <Compile Include="Buffer\ByteArrayBuffer.cs" />
+    <Compile Include="Buffer\BufferFactory.cs" />
+    <Compile Include="Buffer\BufferExtentions.cs" />
+    <Compile Include="Buffer\InvalidMarkException.cs" />
+    <Compile Include="Buffer\DefaultBufferPool.cs" />
+    <Compile Include="Buffer\IBufferPool.cs" />
+    <Compile Include="Buffer\FixedBufferManager.cs" />
+    <Compile Include="Buffer\IBuffer.cs" />
+    <Compile Include="Buffer\ReadOnlyBufferException.cs" />
+    <Compile Include="Buffer\ReleasedBufferException.cs" />
+    <Compile Include="Configuration\Configurations.cs" />
+    <Compile Include="Configuration\NetConfigurationSection.cs" />
+    <Compile Include="Configuration\SessionConfigurationElement.cs" />
+    <Compile Include="Configuration\SessionConfigurationCollection.cs" />
+    <Compile Include="Configuration\SessionConfigurationSection.cs" />
+    <Compile Include="Configuration\SessionConfigurationSectionGroup.cs" />
+    <Compile Include="Pool\BufferedSocketAsyncEventArgsPool.cs" />
+    <Compile Include="Pool\SocketAsyncEventArgsPool.cs" />
+    <Compile Include="Pool\SocketAsyncEventArgsPoolManager.cs" />
+    <Compile Include="Pool\WeakSocketAsyncEventArgs.cs" />
+    <Compile Include="Pool\ISocketAsyncEventArgsPool.cs" />
+    <Compile Include="Session\ISessionIdMetaData.cs" />
+    <Compile Include="Session\SessionState.cs" />
+    <Compile Include="Session\AsyncTcpSession.cs" />
+    <Compile Include="Session\AsyncSocketSessionToken.cs" />
+    <Compile Include="Session\SessionAcceptorBase.cs" />
+    <Compile Include="Session\AsyncSocketSessionAcceptor.cs" />
+    <Compile Include="Session\SessionAcceptedEventArgs.cs" />
+    <Compile Include="Session\ISessionAcceptor.cs" />
+    <Compile Include="Session\Future\AsyncFuture.cs" />
+    <Compile Include="Session\Future\IFuture.cs" />
+    <Compile Include="Session\Future\FutureCompletedEventArgs.cs" />
+    <Compile Include="Session\ISessionEvents.cs" />
+    <Compile Include="Session\SessionEventArgs.cs" />
+    <Compile Include="Session\Dispatcher\DispatcherFactory.cs" />
+    <Compile Include="Session\Dispatcher\DirectDispatcher.cs" />
+    <Compile Include="Session\Dispatcher\IDispatcher.cs" />
+    <Compile Include="Session\Filter\SessionFilterChainBase.cs" />
+    <Compile Include="Session\Filter\DispatcherFilter.cs" />
+    <Compile Include="Session\Filter\FilterChainMode.cs" />
+    <Compile Include="Session\Filter\SessionFilterAdapter.cs" />
+    <Compile Include="Session\Filter\PacketDecoderFilter.cs" />
+    <Compile Include="Session\Filter\NullFilter.cs" />
+    <Compile Include="Session\Filter\ISessionFilter.cs" />
+    <Compile Include="Session\Filter\ISessionFilterChain.cs" />
+    <Compile Include="Session\Packet\IPacketEncoder.cs" />
+    <Compile Include="Session\Packet\IPacketDecoder.cs" />
+    <Compile Include="Session\Packet\DefaultPacket.cs" />
+    <Compile Include="Session\Packet\IPacket.cs" />
+    <Compile Include="Session\SessionBase.cs" />
+    <Compile Include="Session\SocketFactory.cs" />
+    <Compile Include="Session\SessionType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session\AsyncSocketSession.cs" />
+    <Compile Include="Session\ISession.cs" />
+    <Compile Include="Util\WinSock2Wrapper.cs" />
+    <Compile Include="Util\ValidateHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Starts2000\Starts2000.csproj">
+      <Project>{b4ec8424-9b7c-4e98-b370-0400daf61b51}</Project>
+      <Name>Starts2000</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

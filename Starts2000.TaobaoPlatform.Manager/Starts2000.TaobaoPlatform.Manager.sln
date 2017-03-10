@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starts2000.TaobaoPlatform.Manager", "Starts2000.TaobaoPlatform.Manager\Starts2000.TaobaoPlatform.Manager.csproj", "{4A09A80C-2FAD-453C-B73E-D0A98FA4DB3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starts2000.TaobaoPlatform.Manager.Models", "Starts2000.TaobaoPlatform.Manager.Models\Starts2000.TaobaoPlatform.Manager.Models.csproj", "{3CDD38EA-84A9-478B-9BA5-136F89DBE34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starts2000.TaobaoPlatform.Manager.Dal", "Starts2000.TaobaoPlatform.Manager.Dal\Starts2000.TaobaoPlatform.Manager.Dal.csproj", "{9F9F3042-2425-4EA8-B0C1-E1A4AFFC9F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starts2000.TaobaoPlatform.Manager.Client", "Starts2000.TaobaoPlatform.Manager.Client\Starts2000.TaobaoPlatform.Manager.Client.csproj", "{139776D9-5317-4EB3-AAAC-65E606C71B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starts2000.TaobaoPlatform.Manager.Server", "Starts2000.TaobaoPlatform.Manager.Server\Starts2000.TaobaoPlatform.Manager.Server.csproj", "{C5EF0FC0-2F1F-4840-BDE6-D3CD9E6177C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A09A80C-2FAD-453C-B73E-D0A98FA4DB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A09A80C-2FAD-453C-B73E-D0A98FA4DB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A09A80C-2FAD-453C-B73E-D0A98FA4DB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A09A80C-2FAD-453C-B73E-D0A98FA4DB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDD38EA-84A9-478B-9BA5-136F89DBE34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDD38EA-84A9-478B-9BA5-136F89DBE34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDD38EA-84A9-478B-9BA5-136F89DBE34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDD38EA-84A9-478B-9BA5-136F89DBE34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9F3042-2425-4EA8-B0C1-E1A4AFFC9F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9F3042-2425-4EA8-B0C1-E1A4AFFC9F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9F3042-2425-4EA8-B0C1-E1A4AFFC9F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9F3042-2425-4EA8-B0C1-E1A4AFFC9F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139776D9-5317-4EB3-AAAC-65E606C71B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139776D9-5317-4EB3-AAAC-65E606C71B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139776D9-5317-4EB3-AAAC-65E606C71B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139776D9-5317-4EB3-AAAC-65E606C71B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5EF0FC0-2F1F-4840-BDE6-D3CD9E6177C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5EF0FC0-2F1F-4840-BDE6-D3CD9E6177C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5EF0FC0-2F1F-4840-BDE6-D3CD9E6177C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5EF0FC0-2F1F-4840-BDE6-D3CD9E6177C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

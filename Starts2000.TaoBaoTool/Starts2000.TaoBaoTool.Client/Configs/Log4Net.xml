@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+  </configSections>
+  <log4net>
+    <appender name="ColoredConsoleAppender" type="log4net.Appender.ColoredConsoleAppender">
+      <mapping>
+        <level value="ERROR" />
+        <foreColor value="White" />
+        <backColor value="Red, HighIntensity" />
+      </mapping>
+      <mapping>
+        <level value="DEBUG" />
+        <backColor value="Green" />
+      </mapping>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+    </appender>
+    <appender name="AspNetTraceAppender" type="log4net.Appender.AspNetTraceAppender" >
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="时间：%date 线程ID：[%thread] 错误级别：%-5level%newline类:%logger%newline信息：[%property{NDC}] - %message%newline%newline" />
+      </layout>
+    </appender>
+    <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="时间：%date 线程ID：[%thread] 错误级别：%-5level%newline类:%logger%newline信息：[%property{NDC}] - %message%newline%newline" />
+      </layout>
+    </appender>
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value="Logs\Log_" />
+      <appendToFile value="true" />
+      <rollingStyle value="Date" />
+      <datePattern value="yyyyMMdd'.txt'" />
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <ConversionPattern value="%newline%newline时间：%date 线程ID：[%thread] 日志级别：%-5level%newline类：%logger%newline信息：%message%newline%newline" />
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="TraceAppender" />
+      <appender-ref ref="RollingLogFileAppender" />
+    </root>
+    <logger name="TaobaoPlatform">
+      <level value="ALL" />
+      <appender-ref ref="RollingLogFileAppender" />
+    </logger>
+  </log4net>
+</configuration>
