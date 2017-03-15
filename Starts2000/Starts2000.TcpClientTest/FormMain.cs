@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace Starts2000.TcpClientTest
         bool _systemExit;
         IDictionary<AsyncTcpSession, SessionInfo>
             _tcpClients = new Dictionary<AsyncTcpSession, SessionInfo>();
-        IPacket _sendPacket = new DefaultPacket();
+        IPacket _sendPacket;
 
         public FormMain()
         {
@@ -41,7 +42,9 @@ namespace Starts2000.TcpClientTest
 
         void Init()
         {
-            _sendPacket = new DefaultPacketEncoder().Encode(null, "Hello, Starts2000.Net.TcpClient!");
+            _sendPacket = new DefaultPacketEncoder(
+                obj => Encoding.UTF8.GetBytes(obj.ToString()))
+                .Encode(null, new DefaultMessage("Hello, Starts2000.Net.TcpClient!", 1));
 
             IPAddress[] addreses = Dns.GetHostAddresses(Dns.GetHostName());
 
@@ -87,8 +90,9 @@ namespace Starts2000.TcpClientTest
                     try
                     {
                         tcpClient = new AsyncTcpSession(localEP, remoteEP, true, 5000, 1000, true);
-                        tcpClient.PacketEncoder = new DefaultPacketEncoder();
-                        tcpClient.PacketDecoder = new DefaultPacketDecoder();
+                        tcpClient.PacketEncoder = new DefaultPacketEncoder(obj => Encoding.UTF8.GetBytes(obj.ToString()));
+                        tcpClient.PacketDecoder = new DefaultPacketDecoder((buffer, startIndex, length, type) =>
+                            Encoding.UTF8.GetString(buffer.ByteArray, startIndex, length));
                         tcpClient.Closed += TcpClient_Closed;
                         tcpClient.ObjectSent += TcpClient_ObjectSent;
                         tcpClient.StateChanged += TcpClient_StateChanged;

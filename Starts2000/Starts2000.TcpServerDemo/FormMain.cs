@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Starts2000.Net.Codecs;
@@ -62,8 +63,9 @@ namespace Starts2000.TcpServerDemo
                         new IPEndPoint(IPAddress.Parse(tbIP.Text), int.Parse(tbPort.Text)));
                     _acceptor.Backlog = 200;
                     _acceptor.ReuseAddress = true;
-                    _acceptor.PacketEncoder = new DefaultPacketEncoder();
-                    _acceptor.PacketDecoder = new DefaultPacketDecoder();
+                    _acceptor.PacketEncoder = new DefaultPacketEncoder(obj => Encoding.UTF8.GetBytes(obj.ToString()));
+                    _acceptor.PacketDecoder = new DefaultPacketDecoder((buffer, startIndex, length, type) =>
+                            Encoding.UTF8.GetString(buffer.ByteArray, startIndex, length));
                     _acceptor.SessionAccepted += AcceptorSessionAccepted;
                     _acceptor.ExceptionCaught += AcceptorExceptionCaught;
                     _acceptor.Start();
@@ -121,7 +123,7 @@ namespace Starts2000.TcpServerDemo
 
             //Thread.Sleep(100);
 
-            e.Session.Send("Hello," + e.Session.RemoteEndPoint.ToString() + "!");
+            e.Session.Send(new DefaultMessage("Hello," + e.Session.RemoteEndPoint.ToString() + "!", 2));
 
             AppendInfo(e.Session.RemoteEndPoint.ToString()
                 + ": " + (e.Obj as DefaultMessage).Obj.ToString(), true);
