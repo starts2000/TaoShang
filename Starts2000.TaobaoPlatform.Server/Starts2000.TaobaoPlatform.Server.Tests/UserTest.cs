@@ -25,12 +25,12 @@ namespace Starts2000.TaobaoPlatform.Server.Tests
         {
             var user = new User()
             {
-                Account = "Starts2000-1",
+                Account = "Test-1",
                 Password = "123456",
-                Name = "梁香元",
-                QQ = "13929619",
-                Email = "Starts2000@qq.com",
-                Mobile = "13768235640",
+                Name = "Test",
+                QQ = "888888",
+                Email = "test@qq.com",
+                Mobile = "13888888888",
                 Salt = "12345",
                 ReferrerAccount = "Test"
             };

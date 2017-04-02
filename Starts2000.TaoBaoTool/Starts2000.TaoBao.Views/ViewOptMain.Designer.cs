@@ -74,13 +74,13 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSubAccManage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiShopManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHelpMain = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslRemoteConnectInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnectStartTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnectStartTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiHelpMain = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.skinTabControl.SuspendLayout();
             this.tpClientList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvSubAccountList)).BeginInit();
@@ -574,6 +574,20 @@
             this.tsmiShopManage.Size = new System.Drawing.Size(152, 22);
             this.tsmiShopManage.Text = "店铺管理";
             // 
+            // tsmiHelpMain
+            // 
+            this.tsmiHelpMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAbout});
+            this.tsmiHelpMain.Name = "tsmiHelpMain";
+            this.tsmiHelpMain.Size = new System.Drawing.Size(61, 21);
+            this.tsmiHelpMain.Text = "帮助(&H)";
+            // 
+            // tsmiAbout
+            // 
+            this.tsmiAbout.Name = "tsmiAbout";
+            this.tsmiAbout.Size = new System.Drawing.Size(164, 22);
+            this.tsmiAbout.Text = "关于淘商助手(&A)";
+            // 
             // statusStrip
             // 
             this.statusStrip.BackColor = System.Drawing.Color.Transparent;
@@ -621,20 +635,6 @@
             this.tsslConnectStartTime.Name = "tsslConnectStartTime";
             this.tsslConnectStartTime.Size = new System.Drawing.Size(4, 21);
             this.tsslConnectStartTime.Visible = false;
-            // 
-            // tsmiHelpMain
-            // 
-            this.tsmiHelpMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAbout});
-            this.tsmiHelpMain.Name = "tsmiHelpMain";
-            this.tsmiHelpMain.Size = new System.Drawing.Size(61, 21);
-            this.tsmiHelpMain.Text = "帮助(&H)";
-            // 
-            // tsmiAbout
-            // 
-            this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(164, 22);
-            this.tsmiAbout.Text = "关于淘商助手(&A)";
             // 
             // ViewOptMain
             // 
